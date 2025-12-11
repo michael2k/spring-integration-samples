@@ -1,3 +1,17 @@
+pluginManagement {
+	repositories {
+		maven {
+			url repoGroupUrl
+			allowInsecureProtocol = true
+			credentials {
+				username nexusUsername
+				password nexusPassword
+			}
+		}
+		gradlePluginPortal()
+	}
+}
+
 rootProject.name = 'spring-integration-samples'
 
 ['advanced', 'applications', 'basic', 'intermediate', 'dsl'].each {
